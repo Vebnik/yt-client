@@ -1,8 +1,8 @@
 export interface Format {
-    format_id: String
-    resolution: String
-    audio_ext: String
-    video_ext: String
+  format_id: string;
+  resolution: string;
+  audio_ext: string;
+  video_ext: string;
 }
 
 export interface Video {
@@ -14,4 +14,15 @@ export interface Video {
     channel: string
     thumbnail: string
     formats: Format[]
+}
+
+export interface TauriEvent {
+  payload: DownloadData;
+  id: number
+}
+
+export interface DownloadData {
+  video_title: string
+  downloaded_bytes: number
+  total_bytes: number
 }

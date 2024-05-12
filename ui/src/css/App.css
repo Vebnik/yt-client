@@ -61,3 +61,7 @@
 .format-select {
   width: 100%;
 }
+
+.into-title {
+  max-width: 300px;
+}

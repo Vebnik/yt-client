@@ -21,3 +21,16 @@ pub struct Video {
     #[serde(default)]
     formats: Vec<Format>
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct DownloadData {
+    video_title: String,
+    downloaded_bytes: i32,
+    // total_bytes: i32,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct DownloadQuery {
+    pub id: String,
+    pub path: String,
+}
